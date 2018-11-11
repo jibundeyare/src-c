@@ -10,8 +10,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-	int rank;
-	rank = atoi(argv[1]);
+	int rank = atoi(argv[1]);
     int i;
 	// déclaration d'un grand nombre entier non signé
     unsigned long int factorial = 1;
