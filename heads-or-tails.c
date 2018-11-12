@@ -11,12 +11,12 @@ int main(int argc, char* argv[]) {
 
 	if (i == 0) {
 		// si on obtiens 0, on a face
-		printf("face\n");
+		printf("tirage : face\n");
 	} else {
 		// sinon on a pile
-		printf("pile\n");
+		printf("tirage : pile\n");
 	}
 
-    return 0;
+	return 0;
 }
 

@@ -19,6 +19,6 @@ int main(int argc, char* argv[]) {
 	/* appel de la fonction avec un paramètre "trop grand" */
 	stackOverflow("foo bar baz");
 
-    return 0;
+	return 0;
 }
 
