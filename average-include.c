@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+// include de notre propre librairie
+#include "average-lib.c"
 
 int main(int argc, char* argv[]) {
 	// s'il y a moins de 3 arguments (c-à-d moins de 2 arguments utilisateur), on affiche un message d'erreur
@@ -11,21 +13,20 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	// calcul de la moyenne
+	// conversion du tableau de chaîne de caractères en tableau de floats
 	int i;
-	float arg;
-	float sum = 0;
-	float average = 0;
+	int c = argc - 1;
+	float v[c];
 
 	for (i = 1; i < argc; i++) {
-		arg = atof(argv[i]);
-		sum = sum + arg;
+		v[i - 1] = atof(argv[i]);
 	}
 
-	average = sum / (argc - 1);
+	// calcul de la moyenne
+	float r = average(c, v);
 
 	// affichage de la moyenne
-	printf("%.2f\n", average);
+	printf("%.2f\n", r);
 
 	return 0;
 }
